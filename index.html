@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Men's Weekend Trips from Boston</title>
+    <style>
+        :root {
+            --primary: #1e293b;
+            --accent: #2563eb;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #0f172a;
+            --text-muted: #64748b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+            padding-bottom: 40px;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 24px 16px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 0.9rem;
+            color: #cbd5e1;
+        }
+
+        .tldr {
+            background-color: #eff6ff;
+            border-left: 4px solid var(--accent);
+            padding: 12px 16px;
+            margin: 16px;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.9rem;
+        }
+
+        .tabs {
+            display: flex;
+            background-color: #e2e8f0;
+            margin: 0 16px 16px 16px;
+            border-radius: 8px;
+            padding: 4px;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            background: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            cursor: pointer;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .tab-btn.active {
+            background-color: var(--card-bg);
+            color: var(--accent);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .tab-content {
+            display: none;
+            padding: 0 16px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .meta-box {
+            background-color: var(--card-bg);
+            padding: 16px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        .meta-item {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .meta-item strong {
+            color: var(--primary);
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            margin: 24px 0 12px 0;
+            color: var(--primary);
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 4px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            margin-bottom: 24px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 220px;
+            background-color: #cbd5e1;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 16px;
+        }
+
+        .card-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--primary);
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: #334155;
+            margin-bottom: 16px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--accent);
+            color: white;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            width: 100%;
+            text-align: center;
+            border: none;
+        }
+
+        .btn:active {
+            background-color: #1d4ed8;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                max-width: 600px;
+                margin: 0 auto;
+                box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Active 2-Day Escapes</h1>
+        <p>Tailored for 3 Active Men • Departing Boston by Car</p>
+    </header>
+
+    <div class="tldr">
+        <strong>TL;DR</strong> High-impact, multi-option 2-day itineraries combining intense mountain or coastal terrain with distinct regional culinary and brewery outposts.
+    </div>
+
+    <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab(event, 'option1')">Option 1: White Mountains</button>
+        <button class="tab-btn" onclick="switchTab(event, 'option2')">Option 2: Acadia Coast</button>
+    </div>
+
+    <!-- OPTION 1: WHITE MOUNTAINS -->
+    <div id="option1" class="tab-content active">
+        <div class="meta-box">
+            <div class="meta-item"><strong>Drive Time from Boston:</strong> ~2.5 to 3 hours</div>
+            <div class="meta-item"><strong>Primary Route:</strong> I-93 N through Franconia Notch</div>
+            <div class="meta-item"><strong>Passes:</strong> US Forest Service Pass ($5/day at trailheads)</div>
+        </div>
+
+        <h2>Day 1: Arrival & High-Impact Hiking</h2>
+        
+        <div class="card">
+            <div class="image-container">
+                <!-- Using Unsplash open-source structural photography placeholders matching the precise locations -->
+                <img src="https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=600&q=80" alt="Crawford Notch View">
+            </div>
+            <div class="card-content">
+                <div class="card-title">Mount Willard (Crawford Notch)</div>
+                <div class="card-desc">A mid-difficulty 3.2-mile trail scaling roughly 900 vertical feet. Delivers an abrupt, dramatic cliff face overview looking straight down the massive glaciated pass.</div>
+                <a href="https://maps.google.com/?q=Crawford+Notch+Depot+Mt+Willard+Trailhead" class="btn" target="_blank">Open Route in Google Maps</a>
+            </div>
+        </div>
+
+        <h2>Day 1 Evening: Trail Recovery</h2>
+
+        <div class="card">
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1518176258769-f227c798150e?auto=format&fit=crop&w=600&q=80" alt="Local Brewery Taproom">
+            </div>
+            <div class="card-content">
+                <div class="card-title">Ledge Brewing Company (Intervale, NH)</div>
+                <div class="card-desc">An expansive taproom and outdoor space engineered directly for hikers. Features robust house-brewed New England ales and on-site scratch kitchens or local food trucks.</div>
+                <a href="https://maps.google.com/?q=15+Town+Hall+Rd+Intervale+NH+03845" class="btn" target="_blank">Open Route in Google Maps</a>
+            </div>
+        </div>
+
+        <h2>Day 2: Alpine Summits or River Lines</h2>
+
+        <div class="card">
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1544198365-f5d60b6d8190?auto=format&fit=crop&w=600&q=80" alt="Mount Washington Summit">
+            </div>
+            <div class="card-content">
+                <div class="card-title">Mount Washington Summit Road</div>
+                <div class="card-desc">Ascend the steep, technical 7.6-mile mountain auto road straight into the extreme conditions zone at the 6,288-foot peak for unmatched regional vantage points.</div>
+                <a href="https://maps.google.com/?q=1+Mt+Washington+Auto+Rd+Gorham+NH+03581" class="btn" target="_blank">Open Route in Google Maps</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- OPTION 2: ACADIA -->
+    <div id="option2" class="tab-content">
+        <div class="meta-box">
+            <div class="meta-item"><strong>Drive Time from Boston:</strong> ~4.5 to 5 hours</div>
+            <div class="meta-item"><strong>Primary Route:</strong> I-95 N to ME-3 E</div>
+            <div class="meta-item"><strong>Passes:</strong> Acadia National Park Vehicle Pass ($35). Advanced online reservation mandatory for Cadillac Mountain.</div>
+        </div>
+
+        <h2>Day 1: Iron Rungs & Ocean Cliffs</h2>
+        
+        <div class="card">
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80" alt="Acadia Iron Rung Hiking">
+            </div>
+            <div class="card-content">
+                <div class="card-title">The Precipice (or Beehive) Trail</div>
+                <div class="card-desc">An intense, exposed vertical climb utilizing embedded iron ladders, rungs, and narrow granite shelves. Delivers sheer drops directly over the open ocean waves below.</div>
+                <a href="https://maps.google.com/?q=Precipice+Trail+Parking+Park+Loop+Rd+Acadia" class="btn" target="_blank">Open Route in Google Maps</a>
+            </div>
+        </div>
+
+        <h2>Day 1 Evening: Coastal Provisions</h2>
+
+        <div class="card">
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1553618551-fba689030290?auto=format&fit=crop&w=600&q=80" alt="Bar Harbor Waterfront">
+            </div>
+            <div class="card-content">
+                <div class="card-title">Atlantic Brewing Midtown (Bar Harbor)</div>
+                <div class="card-desc">Sample house-made local specialties like Coal Porter or blueberry ales alongside fresh wood-fired provisions or wharf-side steamed lobster setups.</div>
+                <a href="https://maps.google.com/?q=52+Cottage+St+Bar+Harbor+ME+04609" class="btn" target="_blank">Open Route in Google Maps</a>
+            </div>
+        </div>
+
+        <h2>Day 2 Morning: Early Peaks & Marine Lines</h2>
+
+        <div class="card">
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80" alt="Ocean Kayaking / Sand Beach">
+            </div>
+            <div class="card-content">
+                <div class="card-title">Frenchman Bay Kayaking or Sand Beach</div>
+                <div class="card-desc">Book a fast-paced 3-hour sea kayak loop around the rocky outposts of the bay, or choose a sharp 55°F morning cold-plunge surf swim at Sand Beach.</div>
+                <a href="https://maps.google.com/?q=Sand+Beach+Park+Loop+Rd+Acadia" class="btn" target="_blank">Open Route in Google Maps</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchTab(evt, tabId) {
+            const tabContents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+
+            const tabBtns = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < tabBtns.length; i++) {
+                tabBtns[i].classList.remove("active");
+            }
+
+            document.getElementById(tabId).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
