@@ -29,20 +29,69 @@
         }
 
         header {
-            background-color: var(--primary);
-            color: white;
-            padding: 24px 16px;
+            position: relative;
+            background-image: url('IMG_0342.JPG');
+            background-size: cover;
+            background-position: center 60%;
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 32px 16px;
             text-align: center;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(15, 23, 42, 0.1) 0%, rgba(15, 23, 42, 0.7) 100%);
+            z-index: 1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 24px 20px;
+            border-radius: 16px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
         }
 
         header h1 {
-            font-size: 1.5rem;
-            margin-bottom: 8px;
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 6px;
+            color: white;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
         }
 
         header p {
             font-size: 0.9rem;
-            color: #cbd5e1;
+            color: #e2e8f0;
+            font-weight: 500;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .tldr {
@@ -209,8 +258,10 @@
 <body>
 
     <header>
-        <h1>Active 2-Day Escapes</h1>
-        <p>Tailored for the 3 Are Legend • Departing Boston by Car</p>
+        <div class="header-content">
+            <h1>Active 2-Day Escapes</h1>
+            <p>Tailored for the 3 Are Legend • Departing Boston by Car</p>
+        </div>
     </header>
 
     <div class="tldr">
