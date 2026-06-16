@@ -30,7 +30,7 @@
 
         header {
             position: relative;
-            background-image: url('images/IMG_0342.png');
+            background-image: url('images/carbon_men_faces.png');
             background-size: cover;
             background-position: center 60%;
             min-height: 320px;
@@ -264,6 +264,44 @@
             padding-left: 8px;
         }
 
+        .alternatives-group {
+            position: relative;
+            padding-left: 28px;
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+
+        .alternatives-group::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 220px;
+            bottom: 190px;
+            width: 2px;
+            background-color: var(--accent);
+            opacity: 0.35;
+            z-index: 1;
+        }
+
+        .alternative-wrapper {
+            position: relative;
+        }
+
+        .alternative-wrapper::before {
+            content: '';
+            position: absolute;
+            left: -24px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--accent);
+            border: 2px solid var(--bg);
+            z-index: 2;
+            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+        }
+
         .btn {
             display: inline-flex;
             align-items: center;
@@ -393,31 +431,37 @@
 
         <h2>Day 2: Mount Washington or Saco River Lines</h2>
 
-        <div class="alternative-header">Alternative A: Alpine Summit</div>
-        <div class="card">
-            <div class="image-container">
-                <img src="images/auto-road.jpg" alt="Mount Washington Auto Road">
+        <div class="alternatives-group">
+            <div class="alternative-header">Alternative A: Alpine Summit</div>
+            <div class="alternative-wrapper">
+                <div class="card">
+                    <div class="image-container">
+                        <img src="images/auto-road.jpg" alt="Mount Washington Auto Road">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">Mount Washington Summit Road</div>
+                        <div class="card-duration">⏱️ Estimated Duration: 2–3 hours</div>
+                        <div class="card-desc">Drive the steep, winding, and technical 7.6-mile Mount Washington Auto Road to reach the 6,288-foot summit, the highest peak in the Northeast. Expect a thrilling, high-focus drive through three distinct climate zones, culminating in extreme alpine weather conditions and panoramic vistas stretching across five states and into Canada. Explore the historic Tip-Top House and the Sherman Adams Visitor Center at the peak.</div>
+                        <a href="https://www.google.com/search?q=Mount+Washington+Summit+Road" class="btn-outline" target="_blank">Learn More</a>
+                        <a href="https://maps.google.com/?q=1+Mt+Washington+Auto+Rd+Gorham+NH+03581" class="btn" target="_blank">Open in Google Maps</a>
+                    </div>
+                </div>
             </div>
-            <div class="card-content">
-                <div class="card-title">Mount Washington Summit Road</div>
-                <div class="card-duration">⏱️ Estimated Duration: 2–3 hours</div>
-                <div class="card-desc">Drive the steep, winding, and technical 7.6-mile Mount Washington Auto Road to reach the 6,288-foot summit, the highest peak in the Northeast. Expect a thrilling, high-focus drive through three distinct climate zones, culminating in extreme alpine weather conditions and panoramic vistas stretching across five states and into Canada. Explore the historic Tip-Top House and the Sherman Adams Visitor Center at the peak.</div>
-                <a href="https://www.google.com/search?q=Mount+Washington+Summit+Road" class="btn-outline" target="_blank">Learn More</a>
-                <a href="https://maps.google.com/?q=1+Mt+Washington+Auto+Rd+Gorham+NH+03581" class="btn" target="_blank">Open in Google Maps</a>
-            </div>
-        </div>
 
-        <div class="alternative-header">Alternative B: River Lines</div>
-        <div class="card">
-            <div class="image-container">
-                <img src="images/saco_river_kayaking.png" alt="Kayaking on the Saco River in Conway, NH">
-            </div>
-            <div class="card-content">
-                <div class="card-title">Saco River Open-Top Kayaking</div>
-                <div class="card-duration">⏱️ Estimated Duration: 3–4 hours</div>
-                <div class="card-desc">Enjoy a scenic, active-recovery kayaking run down the Saco River in Conway, NH. This open-top kayaking activity features a gentle current, sandy beaches for swimming and resting, and beautiful mountain valley scenery. Rent a kayak locally and drift along clean, cold waters under a pine canopy.</div>
-                <a href="https://www.google.com/search?q=Saco+River+Kayaking+Conway+NH" class="btn-outline" target="_blank">Learn More</a>
-                <a href="https://maps.google.com/?q=Saco+River+Kayaking+Conway+NH" class="btn" target="_blank">Open in Google Maps</a>
+            <div class="alternative-header">Alternative B: River Lines</div>
+            <div class="alternative-wrapper">
+                <div class="card">
+                    <div class="image-container">
+                        <img src="images/saco_river_kayaking.png" alt="Kayaking on the Saco River in Conway, NH">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">Saco River Open-Top Kayaking</div>
+                        <div class="card-duration">⏱️ Estimated Duration: 3–4 hours</div>
+                        <div class="card-desc">Enjoy a scenic, active-recovery kayaking run down the Saco River in Conway, NH. This open-top kayaking activity features a gentle current, sandy beaches for swimming and resting, and beautiful mountain valley scenery. Rent a kayak locally and drift along clean, cold waters under a pine canopy.</div>
+                        <a href="https://www.google.com/search?q=Saco+River+Kayaking+Conway+NH" class="btn-outline" target="_blank">Learn More</a>
+                        <a href="https://maps.google.com/?q=Saco+River+Kayaking+Conway+NH" class="btn" target="_blank">Open in Google Maps</a>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -457,31 +501,37 @@
             </div>
         </div>
 
-        <div class="alternative-header">Alternative A: Extreme Cliff Climb</div>
-        <div class="card">
-            <div class="image-container">
-                <img src="images/precipice_trail.png" alt="Hikers scaling the sheer cliffs of the Precipice Trail">
+        <div class="alternatives-group">
+            <div class="alternative-header">Alternative A: Extreme Cliff Climb</div>
+            <div class="alternative-wrapper">
+                <div class="card">
+                    <div class="image-container">
+                        <img src="images/precipice_trail.png" alt="Hikers scaling the sheer cliffs of the Precipice Trail">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">The Precipice (or Beehive) Trail</div>
+                        <div class="card-duration">⏱️ Estimated Duration: 2.5–3.5 hours (Precipice) or 1.5–2 hours (Beehive)</div>
+                        <div class="card-desc">A strenuous, highly exposed 1.6-mile loop climbing 1,000 vertical feet up the sheer east face of Champlain Mountain. Using embedded iron ladders, rungs, handholds, and granite shelves, this non-technical climbing route is not for the faint of heart. It features extreme cliff-side exposure and rewards climbers with stunning panoramic views of the open ocean. If the Precipice is closed for peregrine falcon nesting (typically late spring to mid-summer), the Beehive Trail serves as an excellent fallback.</div>
+                        <a href="https://www.google.com/search?q=Precipice+Trail+Acadia" class="btn-outline" target="_blank">Learn More</a>
+                        <a href="https://maps.google.com/?q=Precipice+Trail+Parking+Park+Loop+Rd+Acadia" class="btn" target="_blank">Open in Google Maps</a>
+                    </div>
+                </div>
             </div>
-            <div class="card-content">
-                <div class="card-title">The Precipice (or Beehive) Trail</div>
-                <div class="card-duration">⏱️ Estimated Duration: 2.5–3.5 hours (Precipice) or 1.5–2 hours (Beehive)</div>
-                <div class="card-desc">A strenuous, highly exposed 1.6-mile loop climbing 1,000 vertical feet up the sheer east face of Champlain Mountain. Using embedded iron ladders, rungs, handholds, and granite shelves, this non-technical climbing route is not for the faint of heart. It features extreme cliff-side exposure and rewards climbers with stunning panoramic views of the open ocean. If the Precipice is closed for peregrine falcon nesting (typically late spring to mid-summer), the Beehive Trail serves as an excellent fallback.</div>
-                <a href="https://www.google.com/search?q=Precipice+Trail+Acadia" class="btn-outline" target="_blank">Learn More</a>
-                <a href="https://maps.google.com/?q=Precipice+Trail+Parking+Park+Loop+Rd+Acadia" class="btn" target="_blank">Open in Google Maps</a>
-            </div>
-        </div>
 
-        <div class="alternative-header">Alternative B: Scenic Ridge Hike</div>
-        <div class="card">
-            <div class="image-container">
-                <img src="images/gorham_mountain.png" alt="Panoramic view from Gorham Mountain Trail">
-            </div>
-            <div class="card-content">
-                <div class="card-title">Gorham Mountain Trail (via Cadillac Cliffs)</div>
-                <div class="card-duration">⏱️ Estimated Duration: 1.5–2.5 hours</div>
-                <div class="card-desc">A highly scenic, moderate 1.8-mile loop climbing 525 vertical feet. The trail ascends through pitch pine forests to a wide-open granite ridge offering spectacular panoramic views of Sand Beach, Great Head, and the open ocean. To add some light adventure, take the Cadillac Cliffs side trail to walk through narrow rock tunnels and caverns, avoiding the high exposure of the Precipice.</div>
-                <a href="https://www.google.com/search?q=Gorham+Mountain+Trail+Acadia" class="btn-outline" target="_blank">Learn More</a>
-                <a href="https://maps.google.com/?q=Gorham+Mountain+Trailhead+Park+Loop+Rd+Acadia" class="btn" target="_blank">Open in Google Maps</a>
+            <div class="alternative-header">Alternative B: Scenic Ridge Hike</div>
+            <div class="alternative-wrapper">
+                <div class="card">
+                    <div class="image-container">
+                        <img src="images/gorham_mountain.png" alt="Panoramic view from Gorham Mountain Trail">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">Gorham Mountain Trail (via Cadillac Cliffs)</div>
+                        <div class="card-duration">⏱️ Estimated Duration: 1.5–2.5 hours</div>
+                        <div class="card-desc">A highly scenic, moderate 1.8-mile loop climbing 525 vertical feet. The trail ascends through pitch pine forests to a wide-open granite ridge offering spectacular panoramic views of Sand Beach, Great Head, and the open ocean. To add some light adventure, take the Cadillac Cliffs side trail to walk through narrow rock tunnels and caverns, avoiding the high exposure of the Precipice.</div>
+                        <a href="https://www.google.com/search?q=Gorham+Mountain+Trail+Acadia" class="btn-outline" target="_blank">Learn More</a>
+                        <a href="https://maps.google.com/?q=Gorham+Mountain+Trailhead+Park+Loop+Rd+Acadia" class="btn" target="_blank">Open in Google Maps</a>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -500,31 +550,37 @@
 
         <h2>Day 2: Frenchman Bay Kayaking or Sand Beach Surf</h2>
 
-        <div class="alternative-header">Alternative A: Marine Excursion</div>
-        <div class="card">
-            <div class="image-container">
-                <img src="images/frenchman_bay_kayaking.png" alt="Guided sea kayaking in Frenchman Bay">
+        <div class="alternatives-group">
+            <div class="alternative-header">Alternative A: Marine Excursion</div>
+            <div class="alternative-wrapper">
+                <div class="card">
+                    <div class="image-container">
+                        <img src="images/frenchman_bay_kayaking.png" alt="Guided sea kayaking in Frenchman Bay">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">Frenchman Bay Guided Sea Kayaking</div>
+                        <div class="card-duration">⏱️ Estimated Duration: 3 hours</div>
+                        <div class="card-desc">Execute a fast-paced morning guided ocean sea kayaking excursion in Frenchman Bay, paddling around the rocky Porcupine Islands to view seals, nesting eagles, and dramatic granite headlands. Learn about the bay's marine ecology while enjoying an active coastal paddle.</div>
+                        <a href="https://www.google.com/search?q=Frenchman+Bay+Sea+Kayaking" class="btn-outline" target="_blank">Learn More</a>
+                        <a href="https://maps.google.com/?q=Frenchman+Bay+Kayaking+Bar+Harbor+ME" class="btn" target="_blank">Open in Google Maps</a>
+                    </div>
+                </div>
             </div>
-            <div class="card-content">
-                <div class="card-title">Frenchman Bay Guided Sea Kayaking</div>
-                <div class="card-duration">⏱️ Estimated Duration: 3 hours</div>
-                <div class="card-desc">Execute a fast-paced morning guided ocean sea kayaking excursion in Frenchman Bay, paddling around the rocky Porcupine Islands to view seals, nesting eagles, and dramatic granite headlands. Learn about the bay's marine ecology while enjoying an active coastal paddle.</div>
-                <a href="https://www.google.com/search?q=Frenchman+Bay+Sea+Kayaking" class="btn-outline" target="_blank">Learn More</a>
-                <a href="https://maps.google.com/?q=Frenchman+Bay+Kayaking+Bar+Harbor+ME" class="btn" target="_blank">Open in Google Maps</a>
-            </div>
-        </div>
 
-        <div class="alternative-header">Alternative B: Coastal Cold Plunge</div>
-        <div class="card">
-            <div class="image-container">
-                <img src="images/sand_beach_plunge.png" alt="Invigorating cold swim at Sand Beach in Acadia">
-            </div>
-            <div class="card-content">
-                <div class="card-title">Sand Beach Cold-Plunge Surf Swim</div>
-                <div class="card-duration">⏱️ Estimated Duration: 1–2 hours</div>
-                <div class="card-desc">Take an invigorating morning cold-plunge surf swim in the 55°F Atlantic waters at the iconic Sand Beach. Nestled between massive pink granite headlands, this cold plunge offers an intense physical shock and active-recovery swim in the crashing ocean surf.</div>
-                <a href="https://www.google.com/search?q=Sand+Beach+Acadia+National+Park" class="btn-outline" target="_blank">Learn More</a>
-                <a href="https://maps.google.com/?q=Sand+Beach+Park+Loop+Rd+Acadia" class="btn" target="_blank">Open in Google Maps</a>
+            <div class="alternative-header">Alternative B: Coastal Cold Plunge</div>
+            <div class="alternative-wrapper">
+                <div class="card">
+                    <div class="image-container">
+                        <img src="images/sand_beach_plunge.png" alt="Invigorating cold swim at Sand Beach in Acadia">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">Sand Beach Cold-Plunge Surf Swim</div>
+                        <div class="card-duration">⏱️ Estimated Duration: 1–2 hours</div>
+                        <div class="card-desc">Take an invigorating morning cold-plunge surf swim in the 55°F Atlantic waters at the iconic Sand Beach. Nestled between massive pink granite headlands, this cold plunge offers an intense physical shock and active-recovery swim in the crashing ocean surf.</div>
+                        <a href="https://www.google.com/search?q=Sand+Beach+Acadia+National+Park" class="btn-outline" target="_blank">Learn More</a>
+                        <a href="https://maps.google.com/?q=Sand+Beach+Park+Loop+Rd+Acadia" class="btn" target="_blank">Open in Google Maps</a>
+                    </div>
+                </div>
             </div>
         </div>
 
