@@ -32,7 +32,7 @@
             position: relative;
             background-image: url('images/carbon_men_faces.png');
             background-size: cover;
-            background-position: center 60%;
+            background-position: center 75%;
             min-height: 320px;
             display: flex;
             flex-direction: column;
@@ -269,30 +269,35 @@
             padding-left: 28px;
             margin-left: 8px;
             margin-right: 8px;
+            background-image: linear-gradient(to bottom, rgba(37, 99, 235, 0.35), rgba(37, 99, 235, 0.35));
+            background-position: 8px 220px;
+            background-size: 2px calc(100% - 410px);
+            background-repeat: no-repeat;
         }
 
+        /* Top Ball */
         .alternatives-group::before {
             content: '';
             position: absolute;
-            left: 8px;
+            left: 4px;
             top: 220px;
-            bottom: 190px;
-            width: 2px;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
             background-color: var(--accent);
-            opacity: 0.35;
-            z-index: 1;
+            border: 2px solid var(--bg);
+            z-index: 2;
+            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
         }
 
-        .alternative-wrapper {
-            position: relative;
-        }
-
-        .alternative-wrapper::before {
+        /* Bottom Ball */
+        .alternatives-group::after {
             content: '';
             position: absolute;
-            left: -24px;
-            top: 50%;
-            transform: translateY(-50%);
+            left: 4px;
+            bottom: 190px;
+            transform: translateY(50%);
             width: 10px;
             height: 10px;
             border-radius: 50%;
